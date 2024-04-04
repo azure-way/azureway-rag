@@ -80,17 +80,17 @@ jobs:
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # - name: Provision Infrastructure
-      #   run: azd provision --no-prompt --debug
-      #   env:
-      #     AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
-      #     AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-      #     AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
-      #     AZURE_TAGS: ${{ secrets.AZURE_TAGS }}
+      - name: Provision Infrastructure
+        run: azd provision --no-prompt --debug
+        env:
+          AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
+          AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+          AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          AZURE_TAGS: ${{ secrets.AZURE_TAGS }}
 
-      # - name: Deploy Application
-      #   run: azd deploy --no-prompt --debug
-      #   env:
-      #     AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
-      #     AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-      #     AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      - name: Deploy Application
+        run: azd deploy --no-prompt --debug
+        env:
+          AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
+          AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+          AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
