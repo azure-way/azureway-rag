@@ -9,4 +9,5 @@ public record class DocumentResponse(
     DateTimeOffset? LastModified,
     Uri Url,
     DocumentProcessingStatus Status,
-    EmbeddingType EmbeddingType);
+    EmbeddingType EmbeddingType,
+    IDictionary<string, string> metadata);
