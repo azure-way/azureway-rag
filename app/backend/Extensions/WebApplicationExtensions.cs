@@ -127,7 +127,8 @@ internal static class WebApplicationExtensions
                     props.LastModified,
                     builder.Uri,
                     documentProcessingStatus,
-                    embeddingType);
+                    embeddingType,
+                    metadata);
 
                 static TEnum GetMetadataEnumOrDefault<TEnum>(
                     IDictionary<string, string> metadata,
