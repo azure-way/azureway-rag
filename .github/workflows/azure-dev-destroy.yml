@@ -73,7 +73,7 @@ jobs:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Destroy Infrastructure
-        run: azd down --no-prompt --debug
+        run: azd down --no-prompt --force or --purge 
         env:
           AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
           AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
